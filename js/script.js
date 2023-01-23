@@ -66,3 +66,12 @@ gridSizeBtn.addEventListener("click", () => {
     alert("Invalid input. Please enter a positive integer between 1 and 100.");
   }
 });
+
+const clearGrid = document.getElementById("clear-grid");
+clearGrid.addEventListener("click", () => {
+  const divs = document.querySelectorAll("#grid-container div");
+  divs.forEach((div) => {
+    div.style.backgroundColor = "#fff";
+    div.classList.remove("active");
+  });
+});
